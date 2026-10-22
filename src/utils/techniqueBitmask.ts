@@ -1,8 +1,9 @@
 /**
  * Exact technique bitmasks for game pages.
  *
- * Bit N = technique id N (1-60). A mask with any id >= 54 set exceeds 2^53, so
- * the numeric `techniques` field from the API is lossy. The API also sends an
+ * Bit N = technique id N (currently 1-60; the wire mask supports 128 bits).
+ * A mask with any id >= 54 set exceeds 2^53, so the numeric `techniques`
+ * field from the API is lossy. The API also sends an
  * exact base-10 `techniques_bitmask` string: read it into a `bigint`, and send
  * it back as a string. Built on sudojo_types' techniqueBitmaskOf /
  * parseTechniqueBitmask / formatTechniqueBitmask.

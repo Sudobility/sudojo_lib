@@ -49,6 +49,17 @@ describe('techniqueBitmaskString', () => {
     ).toBe(MASK);
     expect(techniqueBitmaskString({ techniques: null })).toBe('0');
   });
+
+  it('preserves a 128-bit mask through game metadata', () => {
+    const mask = ((1n << 127n) | 2n).toString();
+    const fields = techniqueFieldsOf({
+      techniques: 2,
+      techniques_bitmask: mask,
+    });
+    const restored = JSON.parse(JSON.stringify(fields));
+    expect(exactTechniqueBitmask(restored)).toBe(BigInt(mask));
+    expect(techniqueBitmaskString(restored)).toBe(mask);
+  });
 });
 
 describe('techniqueFieldsOf', () => {
