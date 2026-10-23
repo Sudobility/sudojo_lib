@@ -1,6 +1,6 @@
 {
   "name": "@sudobility/sudojo_lib",
-  "version": "0.0.208",
+  "version": "0.0.209",
   "description": "Business logic library for Sudojo app",
   "type": "module",
   "main": "dist/index.js",
@@ -46,10 +46,10 @@
   "author": "Sudobility team",
   "license": "BUSL-1.1",
   "devDependencies": {
-    "@sudobility/di": "^1.5.70",
-    "@sudobility/sudojo_client": "^0.0.164",
-    "@sudobility/sudojo_types": "^1.2.73",
-    "@sudobility/types": "^1.9.71",
+    "@sudobility/di": "^1.5.73",
+    "@sudobility/sudojo_client": "^0.0.166",
+    "@sudobility/sudojo_types": "^1.2.74",
+    "@sudobility/types": "^1.9.72",
     "@tanstack/react-query": "^5.90.11",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.0",
@@ -72,10 +72,10 @@
     "zustand": "^5.0.9"
   },
   "peerDependencies": {
-    "@sudobility/di": "^1.5.70",
-    "@sudobility/sudojo_client": "^0.0.164",
-    "@sudobility/sudojo_types": "^1.2.73",
-    "@sudobility/types": "^1.9.71",
+    "@sudobility/di": "^1.5.73",
+    "@sudobility/sudojo_client": "^0.0.166",
+    "@sudobility/sudojo_types": "^1.2.74",
+    "@sudobility/types": "^1.9.72",
     "@tanstack/react-query": ">=5.0.0",
     "react": ">=18.0.0",
     "zustand": ">=5.0.0"
@@ -88,6 +88,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnqh/sudojo_lib.git"
+    "url": "https://github.com/Sudobility/sudojo_lib.git"
   }
 }
