@@ -300,11 +300,7 @@ export type StrategySlug = (typeof STRATEGY_SLUGS)[number];
 
 /** Difficulty tier of a strategy, shown as a badge. */
 export type StrategyDifficultyTier =
-  | 'beginner'
-  | 'intermediate'
-  | 'advanced'
-  | 'expert'
-  | 'master';
+  'beginner' | 'intermediate' | 'advanced' | 'expert' | 'master';
 
 /**
  * Tier for a strategy's `difficulty`: ≤3 beginner, ≤5 intermediate,

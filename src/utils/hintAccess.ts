@@ -22,10 +22,7 @@ export type HintAccessAction =
 
 /** Which message the hint-access panel shows. */
 export type HintAccessVariant =
-  | 'login'
-  | 'subscription'
-  | 'upgrade'
-  | 'unavailable';
+  'login' | 'subscription' | 'upgrade' | 'unavailable';
 
 /** Panel behavior for one access state. */
 export interface HintAccessPresentation {

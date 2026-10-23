@@ -82,12 +82,7 @@ export const DEFAULT_GAME_SETTINGS: GameSettings = {
  * Game status
  */
 export type GameStatus =
-  | 'idle'
-  | 'entering'
-  | 'playing'
-  | 'paused'
-  | 'completed'
-  | 'failed';
+  'idle' | 'entering' | 'playing' | 'paused' | 'completed' | 'failed';
 
 /**
  * The complete game state

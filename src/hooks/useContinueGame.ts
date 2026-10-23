@@ -14,9 +14,7 @@ import type { CurrentGame, GameSlot } from '../types/currentGame';
 import { localizedField, type TranslateFunction } from '../utils/localizedHint';
 
 export type ContinueTarget =
-  | { type: 'level'; levelId: string }
-  | { type: 'entered' }
-  | null;
+  { type: 'level'; levelId: string } | { type: 'entered' } | null;
 
 export interface UseContinueGameOptions {
   /** Which game slot to check (default: 'play') */

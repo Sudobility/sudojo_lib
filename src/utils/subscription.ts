@@ -354,8 +354,7 @@ export type DeleteAccountBlocker =
 
 /** Result of canDeleteAccount. */
 export type DeleteAccountCheck =
-  | { allowed: true }
-  | { allowed: false; reason: DeleteAccountBlocker };
+  { allowed: true } | { allowed: false; reason: DeleteAccountBlocker };
 
 /**
  * Whether the user may delete their account now. The rule both apps apply:
@@ -366,9 +365,7 @@ export type DeleteAccountCheck =
  */
 export function canDeleteAccount(state: {
   user:
-    | { uid?: string | null; isAnonymous?: boolean | null }
-    | null
-    | undefined;
+    { uid?: string | null; isAnonymous?: boolean | null } | null | undefined;
   subscriptionActive: boolean | null | undefined;
 }): DeleteAccountCheck {
   if (!state.user?.uid) return { allowed: false, reason: 'not_signed_in' };

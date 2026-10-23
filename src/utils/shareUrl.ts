@@ -28,13 +28,7 @@ const EMPTY_INPUT = '0'.repeat(81);
 
 /** What a share URL points at. */
 export type ShareUrlType =
-  | 'daily'
-  | 'puzzle'
-  | 'levels'
-  | 'play'
-  | 'enter'
-  | 'techniques'
-  | 'technique';
+  'daily' | 'puzzle' | 'levels' | 'play' | 'enter' | 'techniques' | 'technique';
 
 export interface ShareUrlParams {
   type: ShareUrlType;
@@ -68,8 +62,7 @@ export interface ParsedShareParams {
 
 /** Query values from URLSearchParams or a plain object (RN route params). */
 export type ShareParamsSource =
-  | URLSearchParams
-  | Record<string, string | null | undefined>;
+  URLSearchParams | Record<string, string | null | undefined>;
 
 function buildPuzzleUrl(domain: string, params: ShareUrlParams): string {
   const searchParams = new URLSearchParams();

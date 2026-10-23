@@ -54,9 +54,7 @@ export interface TechniqueExampleFound {
 }
 
 export type BoardExtractionOutcome =
-  | BoardExtractionResult
-  | TechniqueExampleFound
-  | BoardExtractionError;
+  BoardExtractionResult | TechniqueExampleFound | BoardExtractionError;
 
 /** Board state carried between /solve steps. */
 export interface ExtractionState {
@@ -69,10 +67,7 @@ export interface ExtractionState {
 
 /** One step's outcome: a new state, a find, an error, or null (no progress). */
 export type ExtractionStepOutcome =
-  | ExtractionState
-  | TechniqueExampleFound
-  | BoardExtractionError
-  | null;
+  ExtractionState | TechniqueExampleFound | BoardExtractionError | null;
 
 /** Type guards for the outcome unions. */
 export const isExtractionError = (

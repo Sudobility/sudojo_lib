@@ -33,9 +33,7 @@ export interface UseDeleteAccountOptions {
   token?: string | null | undefined;
   /** The signed-in user */
   user:
-    | { uid?: string | null; isAnonymous?: boolean | null }
-    | null
-    | undefined;
+    { uid?: string | null; isAnonymous?: boolean | null } | null | undefined;
   /** Whether the user has an active subscription (must cancel first) */
   subscriptionActive: boolean | null | undefined;
   /**
