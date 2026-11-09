@@ -1348,6 +1348,19 @@ export type {
 } from './context';
 
 // ============================================================================
+// Routing (shared route registry for web + native)
+// ============================================================================
+
+/**
+ * The framework-agnostic registry of routes both apps share (`sudojoRoutes`),
+ * plus the `SudojoRoutes` map type and the `SudojoNavigator` contract that the
+ * shared UI libraries (`sudojo_ui`, `sudojo_ui_rn`) are typed over. Each app
+ * binds its own navigator (react-router on web, react-navigation on native) to
+ * this registry; see `src/routing/routes.ts`.
+ */
+export * from './routing/routes';
+
+// ============================================================================
 // Entitlement Utilities (re-exported from sudojo_types)
 // ============================================================================
 
