@@ -8,7 +8,13 @@ Business logic library for Sudojo with React hooks for game state, hints, and Su
 bun add @sudobility/sudojo_lib
 ```
 
-Published with restricted access: installing requires npm credentials for the `@sudobility` scope.
+Published to **GitHub Packages** (not the public npm registry). Installing requires an `.npmrc`
+that routes the `@sudobility` scope to GitHub Packages and a GitHub token with `read:packages`:
+
+```
+@sudobility:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GH_PACKAGES_READ_TOKEN}
+```
 
 ## Usage
 
@@ -52,13 +58,16 @@ Full reference: [docs/API.md](docs/API.md). Shared by `sudojo_app` (web), `sudoj
 
 ## Development
 
+Uses [Bun](https://bun.sh) (`bun.lock`); do not mix in npm/yarn/pnpm.
+
 ```bash
-bun run build        # Build to dist/
-bun run test         # Run Vitest
-bun run test:run     # Run tests once
-bun run typecheck    # TypeScript check
+bun run build        # Build to dist/ (tsc + fix-esm-imports)
+bun run test:run     # Run Vitest once (alias: test:unit)
+bun run test:watch   # Run Vitest in watch mode
+bun run test:coverage # Run Vitest with v8 coverage
+bun run typecheck    # TypeScript check (tsc --noEmit)
 bun run lint         # ESLint
-bun run check-all    # Lint + typecheck + tests
+bun run check-all    # Lint + typecheck + test:run
 ```
 
 ## Related Packages
