@@ -2,9 +2,8 @@
  * Hook for admin practice operations
  */
 
-import type { NetworkClient } from '@sudobility/types';
+import type { BaseResponse, NetworkClient } from '@sudobility/types';
 import type { PracticesRegenerateHintsData } from '@sudobility/sudojo_types';
-import type { BaseResponse } from '@sudobility/types';
 import type { UseMutationResult } from '@tanstack/react-query';
 import { useSudojoRegeneratePracticeHints } from '@sudobility/sudojo_client';
 
